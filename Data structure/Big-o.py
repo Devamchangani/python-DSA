@@ -5,14 +5,14 @@ import string
 #------------   find a numbers square   ------------
 
 
-# def get_squared_numbers(numbers):
-#     squared_numbers = []
-#     for n in numbers:
-#         squared_numbers.append(n*n)
-#     print(squared_numbers)
+def get_squared_numbers(numbers):
+    squared_numbers = []
+    for n in numbers:
+        squared_numbers.append(n*n)
+    print(squared_numbers)
 
-# numbers = [2,5,6,9]
-# get_squared_numbers(numbers)
+numbers = [2,5,6,9]
+get_squared_numbers(numbers)
 
 
 #-----------    find a duplication numbers    ------------
