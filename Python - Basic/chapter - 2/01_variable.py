@@ -5,6 +5,7 @@ c = 43.43          #floting number
 print(a)
 print(b)
 print(c)
+print(496+652)
 
 
 
