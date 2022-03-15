@@ -15,7 +15,7 @@ print(d)
 print(c)
 
 
-# --------------- printing type of variable
+# --------------- printing type of variable ----------
 print(type(a))
 print(type(b))
 print(type(c))

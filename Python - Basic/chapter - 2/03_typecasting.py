@@ -2,9 +2,15 @@ a = "2863"
 
 
 # --------- type cating ---------
-a = int(a)
 
-
-# --------- show type --------
+a = int(a)         # string to integer convert
 print(type(a))
-print(a + 73)
+
+
+a = float(a)       # integer to flote convert
+print(type(a))
+print(a)
+
+
+a = str(a)         # flote to string convert
+print(type(a))
