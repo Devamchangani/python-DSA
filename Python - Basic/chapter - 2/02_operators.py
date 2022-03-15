@@ -1,5 +1,3 @@
-from sqlalchemy import true
-
 
 a = 4
 b = 437
