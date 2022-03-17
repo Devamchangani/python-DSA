@@ -4,7 +4,3 @@ b = input("enter a second name:")
 print(type(a))
 print(a)
 print(b)
-
-
-
-# 1.25
