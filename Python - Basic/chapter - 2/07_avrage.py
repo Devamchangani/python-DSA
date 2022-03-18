@@ -10,4 +10,3 @@ b =  int(input("Enter a second number :"))
 avg = (a+b)/2
 
 print("The value of avrage of a and b", avg)
-print("The value of avrage of a and b", avg)
