@@ -10,3 +10,8 @@ print(MyDict["car"])
 print(MyDict["Devam"])
 print(MyDict["list"])
 print(MyDict['anotherdict']['Devam'])
+
+# Changed dictionory value
+
+MyDict["list"] = [852, 826, 999]
+print(MyDict["list"])
