@@ -11,6 +11,7 @@ b.add(17)
 b.add(17)# adding a value repeatedly does not changes a set
 
 b.add((5, 8, 9)) #can add tuple to set
+b.add((54,83,999))
 print(b)
 
 #b.add({4:5}) #cannot add list or dictionory to set
