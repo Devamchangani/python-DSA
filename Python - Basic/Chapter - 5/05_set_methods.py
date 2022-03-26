@@ -28,7 +28,11 @@ print(len(b))
 b.remove(17)
 print(b)
 
+
+#remove value
 print(b.pop())
+
+
 
 
 
