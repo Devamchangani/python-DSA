@@ -28,5 +28,7 @@ print(len(b))
 b.remove(17)
 print(b)
 
+print(b.pop())
+
 
 
