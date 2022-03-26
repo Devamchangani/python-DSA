@@ -7,11 +7,14 @@ print(type(b))
 
 # adding a value in set
 b.add(8)
+
 b.add(17)
 b.add(17)# adding a value repeatedly does not changes a set
+print(b)
 
 b.add((5, 8, 9)) #can add tuple to set
 print(b)
+
 b.add((54,83,999))
 print(b)
 
