@@ -32,6 +32,11 @@ print(b)
 #remove value
 print(b.pop())
 
+#clear a set
+#b.clear()
+
+
+
 
 
 
