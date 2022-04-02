@@ -33,4 +33,4 @@ print(b)
 print(b.pop())
 
 #clear a set
-#b.clear()
+#b.clear
