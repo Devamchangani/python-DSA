@@ -34,4 +34,3 @@ print(b.pop())
 
 #clear a set
 #b.clear
-
