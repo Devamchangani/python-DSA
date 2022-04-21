@@ -1,11 +1,11 @@
 # IS
 
-# a = None
+a = None
 
-# if (a is None):
-#     print("yes")
-# else:
-#     print("no")
+if (a is None):
+    print("yes")
+else:
+    print("no")
 
 # IN
 
