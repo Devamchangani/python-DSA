@@ -1,12 +1,15 @@
 def game():
-    return 64
+    return 98
 
 
 score = game()
 
-f = open("F:\python\Python - Basic\hiscore.txt")
-hiscore = f.read()
+with open("F:\python\Python - Basic\TEXT-File\hiscore.txt") as f:
+    hiscore = f.read()
 
-if hiscore<score:
-      with open("F:\python\Python - Basic\hiscore.txt") as f:
+if  hiscore=='':
+    with open("F:\python\Python - Basic\TEXT-File\hiscore.txt", "w") as f:
+          f.write(str(score))  
+elif int(hiscore)<score :
+      with open("F:\python\Python - Basic\TEXT-File\hiscore.txt", "w") as f:
           f.write(str(score))  
