@@ -1,6 +1,6 @@
 import turtle
 turtle.pensize(3)
-turtle.speed(2)
+turtle.speed(200)
 turtle.bgcolor("black")
 
 for i in range(8):
