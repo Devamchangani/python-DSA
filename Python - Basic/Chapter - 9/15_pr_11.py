@@ -1,6 +1,6 @@
 import os
-oldname = "F:\python\Python - Basic\TEXT-File/copy.txt"
-newname = "F:\python\Python - Basic\TEXT-File/rename.txt"
+oldname = "F:\python\Python - Basic\Chapter - 9\TEXT-File/copy.txt"
+newname = "F:\python\Python - Basic\Chapter - 9\TEXT-File/rename.txt"
 
 with open(oldname) as f:
     content = f.read()

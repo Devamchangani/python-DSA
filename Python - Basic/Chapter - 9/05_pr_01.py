@@ -1,4 +1,4 @@
-f = open ('F:\python\Python - Basic\TEXT-File\poem.txt')
+f = open ('F:\python\Python - Basic\Chapter - 9\TEXT-File\poem.txt')
 t = f.read()
 
 if 'twinkle' in t:

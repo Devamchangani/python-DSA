@@ -1,5 +1,5 @@
-file1 = "F:\python\Python - Basic\TEXT-File/this.txt"
-file2 = "F:\python\Python - Basic\TEXT-File/copy.txt"
+file1 = "F:\python\Python - Basic\Chapter - 9\TEXT-File/this.txt"
+file2 = "F:\python\Python - Basic\Chapter - 9\TEXT-File/copy.txt"
 
 with open (file1) as f:
     f1 = f.read()

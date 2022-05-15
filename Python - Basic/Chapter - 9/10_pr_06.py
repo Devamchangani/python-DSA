@@ -1,4 +1,4 @@
-with open('F:\python\Python - Basic\TEXT-File\log.txt') as f:
+with open('F:\python\Python - Basic\Chapter - 9\TEXT-File\log.txt') as f:
     content = f.read()
 
 if 'python' in content.lower():

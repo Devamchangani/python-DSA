@@ -20,13 +20,13 @@ print(f" you guessed the number in {guesses} guesses")
 
 score = guesses
 
-with open("F:\python\Python - Basic\TEXT-File\Project-2_hiscore.txt") as f:
+with open("F:\python\Python - Basic\Basic projects\Project-2_hiscore.txt") as f:
     hiscore = f.read()
 
 if  hiscore=='':
-    with open("F:\python\Python - Basic\TEXT-File\Project-2_hiscore.txt", "w") as f:
+    with open("F:\python\Python - Basic\Basic projects\Project-2_hiscore.txt", "w") as f:
         f.write(str(score))  
 elif int(hiscore)>score :
     print("You have brocken the large score")
-    with open("F:\python\Python - Basic\TEXT-File\Project-2_hiscore.txt", "w") as f:
+    with open("F:\python\Python - Basic\Basic projects\Project-2_hiscore.txt", "w") as f:
         f.write(str(score))  

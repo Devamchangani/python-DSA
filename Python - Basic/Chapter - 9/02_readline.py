@@ -1,4 +1,4 @@
-f = open("F:\python\Python - Basic\TEXT-File\demo.txt", "r")
+f = open("F:\python\Python - Basic\Chapter - 9\TEXT-File\demo.txt", "r")
 # Read first line
 print(f.readline())
 # Read Second line

@@ -1,6 +1,6 @@
 content = True
 i = 1
-with open('F:\python\Python - Basic\TEXT-File\log.txt') as f:
+with open('F:\python\Python - Basic\Chapter - 9\TEXT-File\log.txt') as f:
     while content:
         content = f.readline()
         
