@@ -1,3 +1,13 @@
+'''
+   ====== Snake, water, gun GAME ======
+
+   We all have played snake, water, gun game in our childhood. 
+if  you haven't, google the rules of this game and write a python
+program capable of playing this game with the user.
+
+'''
+
+
 import random
 
 # snake water gun or rock paper scissors 

@@ -1,3 +1,12 @@
+'''
+    ====== Student Library ======
+
+    Implement a Student library System using OOPS where students can borrow a book from the list of books Create a separate 
+    Library and Student class. Your program must be menu driven. You are free to choose methods and attributes of your choice
+    to implement this functionality
+
+'''
+
 class Library:
     
     def __init__(self, listofbooks):
