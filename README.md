@@ -1,6 +1,8 @@
 # python-DSA
 
 
+============ Please Follow the Chapter by line by line ============
+ 
 Chapter 1 - Modules, Comments & Pip 
 Chapter 2 - Variables & Data Types
 Chapter 3 - Strings
