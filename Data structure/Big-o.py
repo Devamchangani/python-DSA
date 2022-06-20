@@ -18,13 +18,14 @@ get_squared_numbers(numbers)
 #-----------    find a duplication numbers    ------------
 
 
-numbers = [3,6,3,5,2,4,5]
+numbers = [3,6,5,3,6,2,4,5]
 
 for i in range(len(numbers)):
     for j in range(i+1, len(numbers)):
         if numbers[i] == numbers[j]:
             print(numbers[i])
-            print("is a duplicate")
-            
+            print("is a duplicate") 
             break
     break
+    
+
