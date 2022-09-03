@@ -157,5 +157,5 @@ if __name__ == '__main__':
         elif choice == 5:
                 print(root.get_length())
         elif choice == 6:
-                print("")
+                print("Thanks! Hope you are enjoyed Linked list")
                 break
