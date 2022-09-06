@@ -16,13 +16,13 @@ class trip:
         # cin>>a;
         # cout<<"Enter number of larger bus:";
         # cin>>b;
-        # cout<<"Enter number of set of larger bus:";
+        # cout<<"Enter number of seat of larger bus:";
         # cin>>c;
         # cout<<"Enter cost of larger bus:";
         # cin>>d;
         # cout<<"Enter number of smaller bus:";
         # cin>>e;
-        # cout<<"Enter number of set of smaller bus:";
+        # cout<<"Enter number of seat of smaller bus:";
         # cin>>f;
         # cout<<"Enter cost of smaller bus:";
         # cin>>g;
@@ -35,13 +35,31 @@ class trip:
         
         a = int(input("Enter number of students:"))
         b = int(input("Enter number of larger bus:"))
-        c = int(input("Enter number of set of larger bus:"))
+        c = int(input("Enter number of seat of larger bus:"))
         d = int(input("Enter cost of larger bus:"))
         e = int(input("Enter number of smaller bus:"))
-        f = int(input("Enter number of set of smaller bus:"))
+        f = int(input("Enter number of seat of smaller bus:"))
         g = int(input("Enter cost of smaller bus:"))
         h = int(input("Enter number of drive:"))
 
+
+        # ans1 = 0
+        # ans2 = 0
+        ans3 = 0
+        ans4 = 0
+        ans5 = 0
+
+        aa = 0
+        bb = 0
+        cc = 0
+        dd = 0
+        ee = 0
+        ff = 0
+        gg = 0
+        hh = 0
+        ii = 0
+        jj = 0
+        kk = 0
 
 
         y = a/f
@@ -55,9 +73,10 @@ class trip:
         else:
             ans1=0
         
+
         x=a/c
         if(h>=x):
-        
+         
             y=0
             ans2=(d*x)+(g*y)
             cc=x
@@ -66,22 +85,29 @@ class trip:
         else:
             ans2=0
         
+
+
+
         if(ans1!=0):
         
+            # ans3 = 0
             x=0
             y=h
             ans3=(d*x)+(g*y)
             ee=x
             ff=y
+            
+        elif(ans2!=0):
         
-        if(ans2!=0):
-        
+            # ans4 = 0
             y=0
             x=h
             ans4=(d*x)+(g*y)
             gg=x
             hh=y
         
+        
+        # ans5 = 0
         p=a-(f*h)
         q=c-f
         x=p/q
@@ -91,6 +117,7 @@ class trip:
         ans5=(d*x)+(g*y)
         ii=x
         jj=y
+
         if(ans1==0):
         
             largest=ans2
@@ -103,16 +130,18 @@ class trip:
                 largest=ans5
             
             if(largest==ans2):
-                
-                print(f"Your minimum cost is:{ans2}")
-                print(f"So you choose:' {cc} ' larger bus and '{dd}' smaller bus")
+                if (ans2 == 0):
+                    print("Your Drive is low: ")
+                else:
+                    print(f"Your minimum cost is:{ans2} ans2" )
+                    print(f"So you choose:' {cc} ' larger bus and '{dd}' smaller bus")
                 
                 # cout<<"\nYour minimum cost is:"<<ans2;
                 # cout<<"\nSo you choose '"<<cc<<"' larger bus and '"<<dd<<"' smaller bus";
             
             elif(largest==ans4):
             
-                print(f"Your minimum cost is:{ans4}")
+                print(f"Your minimum cost is:{ans4} ans4 ")
                 print(f"So you choose:' {gg} ' larger bus and '{hh}' smaller bus")
 
 
@@ -121,7 +150,7 @@ class trip:
             
             else:
             
-                print(f"Your minimum cost is:{ans5}")
+                print(f"Your minimum cost is:{ans5} ans5")
                 print(f"So you choose:' {ii} ' larger bus and '{jj}' smaller bus")
 
 
@@ -141,16 +170,18 @@ class trip:
                 largest=ans5
             
             if(largest==ans1):
-               
-                print(f"Your minimum cost is:{ans1}")
-                print(f"So you choose:' {aa} ' larger bus and '{bb}' smaller bus")    
+                if (ans1 == 0):
+                    print("Your Drive is low: ")
+                else:
+                    print(f"Your minimum cost is:{ans1} ans1")
+                    print(f"So you choose:' {aa} ' larger bus and '{bb}' smaller bus")    
 
                 # cout<<"\nYour minimum cost is:"<<ans1;
                 # cout<<"\nSo you choose '"<<aa<<"' larger bus and '"<<bb<<"' smaller bus";
             
             elif(largest==ans3):
             
-                print(f"Your minimum cost is:{ans3}")
+                print(f"Your minimum cost is:{ans3} ans3")
                 print(f"So you choose:' {ee} ' larger bus and '{ff}' smaller bus")
 
                 # cout<<"\nYour minimum cost is:"<<ans3;
@@ -158,7 +189,7 @@ class trip:
             
             else:
             
-                print(f"Your minimum cost is:{ans5}")
+                print(f"Your minimum cost is:{ans5} ans5")
                 print(f"So you choose:' {ii} ' larger bus and '{jj}' smaller bus")
 
                 # cout<<"\nYour minimum cost is:"<<ans5;
