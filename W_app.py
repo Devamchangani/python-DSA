@@ -5,3 +5,4 @@ import pywhatkit as kit
 # print("Send")
 kit.sendwhatmsg_instantly("+", "HELLO I AM DC")
 
+
