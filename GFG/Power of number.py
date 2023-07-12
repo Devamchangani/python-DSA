@@ -37,6 +37,6 @@ def main():
         
         T-=1
 
-1if __name__=="__main__":
+if __name__=="__main__":
     main()
 # } Driver Code Ends
