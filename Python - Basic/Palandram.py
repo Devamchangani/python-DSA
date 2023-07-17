@@ -5,4 +5,5 @@ def pal(str):
     else:
         return False
 
-print(pal("word"))
+
+print(pal("helleH"))
