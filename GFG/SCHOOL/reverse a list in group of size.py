@@ -5,15 +5,10 @@ def rev(data,k):
     print("")
     for i in range(0,l,k):
         for j in range(i,i+k):
-            # print(data[j])
-            # b = data[j]
-            # a.append(data[j])
             if j < l:
                 a.insert(i, data[j])
             else:
                 break
-
-        # print("")
     print(a)
 
 
