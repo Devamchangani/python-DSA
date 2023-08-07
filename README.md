@@ -1,4 +1,4 @@
-# python-DSA
+# PYTHON-DSA
 
 # PYTHON - BASIC
 
