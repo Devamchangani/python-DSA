@@ -10,7 +10,7 @@ def fibonacci():
         print(l)
         s = f
         f = l
-        
+    print(f)
 
 if __name__ == "__main__":
     fibonacci()
