@@ -32,7 +32,32 @@ def gcd(a,b):
 if __name__ == "__main__":
     input_val()
     if fill % gcd(cap1,cap2) == 0:
-        print(f"Solution is available!! \n Follow The Path: ")
+        print(f"Solution is available!! \nFollow The Path: ")
         wjp(0,0)
     else:
         print(f"No solution is available for given values of jug1: {cap1} jug2: {cap2}")
+
+
+# 2 ways
+# from collections import defaultdict
+
+# def waterjug(amt1,amt2,jg1,jg2,aim,visited):
+#     if(amt1==aim and amt1==0) or(amt1==0 and amt2==aim):
+#         print(amt1,amt2)
+#         return True
+#     if(visited[(amt1,amt2)]==False):
+#         print(amt1,amt2)
+
+#         visited[(amt1,amt2)]=True
+#         return (waterjug(0,amt2,jg1,jg2,aim,visited) or waterjug(amt1,0,jg1,jg2,aim,visited) or waterjug(jg1,amt2,jg1,jg2,aim,visited) or waterjug(amt1,jg2,jg1,jg2,aim,visited) or waterjug(amt1+min(amt2,(jg1-amt1)),amt2-min(amt2,(jg1-amt1)),jg1,jg2 ,aim,visited) or waterjug(amt1-min(amt1,(jg2-amt2)),amt2+min(amt1,(jg2-amt2)),jg1,jg2,aim,visited))
+#     else:
+#         return False
+
+# def solve(jg1,jg2,aim):
+#     visited = defaultdict(lambda:False)
+#     waterjug(0,0,jg1,jg2,aim,visited)
+
+# jg1=int(input("Enter value of jug1:"))
+# jg2=int(input("Enter value of jug2:"))
+# aim=int(input("Enter value of aim:"))
+# solve(jg1,jg2,aim)
