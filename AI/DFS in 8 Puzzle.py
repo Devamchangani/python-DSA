@@ -1,60 +1,72 @@
-from collections import deque
-import numpy as np
+# Define the goal state
+goal_state = ((1, 2, 3), (8, 0, 4), (7, 6, 5))
 
-# Function to check if the given state is the goal state
-def is_goal_state(state, goal_state):
+# Define the initial state
+initial_state = ((2, 8, 3), (1, 6, 4), (7, 0, 5))
+
+# Define the predefined depth limit
+L = 10
+
+# Function to check if a state is the goal state
+def is_goal(state):
     return state == goal_state
 
-# Function to get all possible states by swapping the blank tile with its neighbors
-def get_possible_states(state):
-    possible_states = []
-    blank_index = state.index(0)
+# Function to find possible actions/moves
+def get_possible_actions(state):
+    actions = []
+    row, col = None, None
+    for i in range(3):
+        for j in range(3):
+            if state[i][j] == 0:
+                row, col = i, j
+                break
 
-    # Possible moves: left, right, up, down
-    moves = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    # Possible moves: Up, Down, Left, Right
+    possible_moves = [(row-1, col), (row+1, col), (row, col-1), (row, col+1)]
 
-    for dx, dy in moves:
-        new_x, new_y = blank_index // 3 + dx, blank_index % 3 + dy
+    for move in possible_moves:
+        if 0 <= move[0] < 3 and 0 <= move[1] < 3:
+            actions.append(move)
 
-        if 0 <= new_x < 3 and 0 <= new_y < 3:
-            new_state = state[:]
-            new_blank_index = new_x * 3 + new_y
-            new_state[blank_index], new_state[new_blank_index] = new_state[new_blank_index], new_state[blank_index]
-            possible_states.append(new_state)
+    return actions
 
-    return possible_states
+# Function to perform a move on a state
+def perform_move(state, move):
+    row1, col1 = None, None
+    for i in range(3):
+        for j in range(3):
+            if state[i][j] == 0:
+                row1, col1 = i, j
+                break
 
-# Function to perform BFS search on the 8-puzzle problem
-def bfs_search(initial_state, goal_state):
-    queue = deque([(initial_state, [])])
-    visited = set()
+    row2, col2 = move
+    state = list(map(list, state))
+    state[row1][col1], state[row2][col2] = state[row2][col2], state[row1][col1]
+    return tuple(map(tuple, state))
 
-    while queue:
-        state, path = queue.popleft()
+# Depth-First Search
+def dfs(state, depth):
+    if depth > L:
+        return False
 
-        if is_goal_state(state, goal_state):
-            return path
+    if is_goal(state):
+        return True
 
-        visited.add(tuple(state))
+    actions = get_possible_actions(state)
+    for action in actions:
+        new_state = perform_move(state, action)
+        if dfs(new_state, depth + 1):
+            # print(new_state[0])
+            # print()
+            for i in range(3):
+              print(new_state[i])
+            print()
+            return True
 
-        for next_state in get_possible_states(state):
-            if tuple(next_state) not in visited:
-                queue.append((next_state, path + [next_state]))
+    return False
 
-    return None
-
-# Example usage:
-if __name__ == "__main__":
-    initial_state = [1, 2, 3, 0, 4, 6, 7, 5, 8]
-    goal_state = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-
-    result_path = bfs_search(initial_state, goal_state)
-
-    if result_path:
-        print("Path to goal state:")
-        for state in result_path:
-           a = np.array(state)
-           print(a.reshape((3,3)))
-           print("")
-    else:
-        print("Goal state not reachable.")
+# Start DFS from the initial state
+if dfs(initial_state, 0):
+    print("Goal state reached!")
+else:
+    print("Goal state not reached within depth limit.")
