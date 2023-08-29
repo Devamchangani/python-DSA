@@ -1,73 +1,84 @@
-# import pywhatkit as kit
+# # import pywhatkit as kit
 
-# kit.sendwhatmsg("+","HELLO I AM DC,10,50")
-# kit.sendwhatmsg("+", "HELLO I AM DC", 7, )
-# print("Send")
-# kit.sendwhatmsg_instantly("+", "HELLO I AM DC")
-
-
-import plivo
-
-client = plivo.RestClient('<auth_id>','<auth_token>')
-response = client.messages.create(
-    src='<sender_id>',
-    dst='<destination_number_1<destination_number_2>',
-    text='Flash sale — half price on all products — offer expires at midnight. Use code 50OFF at checkout',)
-print(response)
+# # kit.sendwhatmsg("+","HELLO I AM DC,10,50")
+# # kit.sendwhatmsg("+", "HELLO I AM DC", 7, )
+# # print("Send")
+# # kit.sendwhatmsg_instantly("+", "HELLO I AM DC")
 
 
-# Program to send bulk customized message through WhatsApp web application
-# Author @inforkgodara
+# import plivo
 
-# from selenium import webdriver
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.common.keys import Keys
-# from selenium.webdriver.common.action_chains import ActionChains
-# from selenium.common.exceptions import NoSuchElementException
-# import pandas
-# import time
+# client = plivo.RestClient('<auth_id>','<auth_token>')
+# response = client.messages.create(
+#     src='<sender_id>',
+#     dst='<destination_number_1<destination_number_2>',
+#     text='Flash sale — half price on all products — offer expires at midnight. Use code 50OFF at checkout',)
+# print(response)
 
-# # Load the chrome driver
-# driver = webdriver.Chrome()
-# count = 0
 
-# # Open WhatsApp URL in chrome browser
-# driver.get("https://web.whatsapp.com/")
-# wait = WebDriverWait(driver, 20)
+# # Program to send bulk customized message through WhatsApp web application
+# # Author @inforkgodara
 
-# # Read data from excel
-# excel_data = pandas.read_excel('Customer bulk email data.xlsx', sheet_name='Customers')
+# # from selenium import webdriver
+# # from selenium.webdriver.support.ui import WebDriverWait
+# # from selenium.webdriver.common.keys import Keys
+# # from selenium.webdriver.common.action_chains import ActionChains
+# # from selenium.common.exceptions import NoSuchElementException
+# # import pandas
+# # import time
 
-# # Iterate excel rows till to finish
-# for column in excel_data['Name'].tolist():
-#     # Assign customized message
-#     message = excel_data['Message'][0]
+# # # Load the chrome driver
+# # driver = webdriver.Chrome()
+# # count = 0
 
-#     # Locate search box through x_path
-#     search_box = '//*[@id="side"]/div[1]/div/label/div/div[2]'
-#     person_title = wait.until(lambda driver:driver.find_element_by_xpath(search_box))
+# # # Open WhatsApp URL in chrome browser
+# # driver.get("https://web.whatsapp.com/")
+# # wait = WebDriverWait(driver, 20)
 
-#     # Clear search box if any contact number is written in it
-#     person_title.clear()
+# # # Read data from excel
+# # excel_data = pandas.read_excel('Customer bulk email data.xlsx', sheet_name='Customers')
 
-#     # Send contact number in search box
-#     person_title.send_keys(str(excel_data['Contact'][count]))
-#     count = count + 1
+# # # Iterate excel rows till to finish
+# # for column in excel_data['Name'].tolist():
+# #     # Assign customized message
+# #     message = excel_data['Message'][0]
 
-#     # Wait for 2 seconds to search contact number
-#     time.sleep(2)
+# #     # Locate search box through x_path
+# #     search_box = '//*[@id="side"]/div[1]/div/label/div/div[2]'
+# #     person_title = wait.until(lambda driver:driver.find_element_by_xpath(search_box))
 
-#     try:
-#         # Load error message in case unavailability of contact number
-#         element = driver.find_element_by_xpath('//*[@id="pane-side"]/div[1]/div/span')
-#     except NoSuchElementException:
-#         # Format the message from excel sheet
-#         message = message.replace('{customer_name}', column)
-#         person_title.send_keys(Keys.ENTER)
-#         actions = ActionChains(driver)
-#         actions.send_keys(message)
-#         actions.send_keys(Keys.ENTER)
-#         actions.perform()
+# #     # Clear search box if any contact number is written in it
+# #     person_title.clear()
 
-# # Close chrome browser
-# driver.quit()
+# #     # Send contact number in search box
+# #     person_title.send_keys(str(excel_data['Contact'][count]))
+# #     count = count + 1
+
+# #     # Wait for 2 seconds to search contact number
+# #     time.sleep(2)
+
+# #     try:
+# #         # Load error message in case unavailability of contact number
+# #         element = driver.find_element_by_xpath('//*[@id="pane-side"]/div[1]/div/span')
+# #     except NoSuchElementException:
+# #         # Format the message from excel sheet
+# #         message = message.replace('{customer_name}', column)
+# #         person_title.send_keys(Keys.ENTER)
+# #         actions = ActionChains(driver)
+# #         actions.send_keys(message)
+# #         actions.send_keys(Keys.ENTER)
+# #         actions.perform()
+
+# # # Close chrome browser
+# # driver.quit()
+
+import socket
+
+# Replace 'smtp.example.com' with your actual SMTP server hostname
+smtp_server = 'smtp.example.com'
+
+try:
+    smtp_ip = socket.gethostbyname(smtp_server)
+    print(f"SMTP Server IP: {smtp_ip}")
+except socket.gaierror as e:
+    print(f"Error resolving SMTP server: {e}")
