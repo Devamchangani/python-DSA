@@ -22,13 +22,13 @@ def send_email(sender_email, sender_password, recipient_email, proxy_ip, proxy_p
         print(f"Error sending email to {recipient_email}: {e}")
 
 # Email configuration
-sender_email = 'devemchangani.co21d1@scet.ac.in'
-sender_password = 'cfyvquvbmgjvvjvz'
+sender_email = 'your_email@example.com'
+sender_password = 'your_email_password'
 subject = 'Subject of the Email'
 message = 'Hello, this is the body of the email!'
-recipient_emails = ['devamchangani@gmail.com', 'devamchangani812@gmail.com', 'sd.empiricinfotech1@gmail.com']
-proxy_ips = ['2.56.119.93', '185.199.229.156', '185.199.228.220']
-proxy_ports = [5074, 7492, 7300]  # Replace with actual proxy ports
+recipient_emails = ['recipient1@example.com', 'recipient2@example.com', 'recipient3@example.com']
+proxy_ips = ['proxy1_ip', 'proxy2_ip', 'proxy3_ip']
+proxy_ports = [proxy1_port, proxy2_port, proxy3_port]  # Replace with actual proxy ports
 
 for recipient_email in recipient_emails:
     # Choose a proxy randomly from the list
