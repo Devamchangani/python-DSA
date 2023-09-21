@@ -31,7 +31,7 @@
 import os
 
 # Replace 'file_name' with the name of the file you want to find (including extension)
-file_name = 'Chapter 13 - Practice Set.pdf'
+file_name = 'TT-EXAM.txt'
 
 def search_file(starting_directory, target_file_name):
     for root, dirs, files in os.walk(starting_directory):
@@ -45,6 +45,7 @@ def search_file(starting_directory, target_file_name):
                 print(f'Error opening {file_path}: {str(e)}')
 
 # Replace 'C:\\' with the root directory where you want to start the search
-search_directory = 'C:\\'
+search_directory = ['C:\\', 'D:\\', 'E:\\', 'F:\\']
 
-search_file(search_directory, file_name)
+for i in search_directory:
+    search_file(i, file_name)
