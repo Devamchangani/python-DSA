@@ -41,7 +41,7 @@ from email.utils import formataddr
 def send_email(name, email, msg, phoneno):
     sender_name = "DC"  # Replace with the name you want to appear as the sender
     sender_email = "dc@example.com"  # Replace with your Gmail email address
-    recipients = ["devemchangani.co21d1@scet.ac.in"]  # Replace with the recipient's email address
+    recipients = ["email"]  # Replace with the recipient's email address
 
     # Create the message container
     message = MIMEMultipart()
@@ -56,8 +56,8 @@ def send_email(name, email, msg, phoneno):
     # Connect to the SMTP server
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
-    smtp_username = "devemchangani.co21d1@scet.ac.in"  # Replace with your Gmail email address
-    smtp_password = "gatv hmwr rggd awfc"  # Replace with your application-specific password
+    smtp_username = "email"  # Replace with your Gmail email address
+    smtp_password = "pass"  # Replace with your application-specific password
 
     with smtplib.SMTP(smtp_server, smtp_port) as server:
         server.starttls()
